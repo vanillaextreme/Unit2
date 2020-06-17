@@ -3,6 +3,8 @@
 box-sizing: border-box;   
 }
 
+/* Base element styles */
+
 html {
     height: 100%;
 }
@@ -11,95 +13,94 @@ body {
 margin: 0;
 padding: 0;
 font-family: 'Open-Sans', sans-serif;    
-color: grey;
-background: rgb(250, 250, 250);
 overflow: auto;
 display: flex;
 flex-direction: column;
 min-height: 100%;
-height: 
 }
 
 /* Link Styles */
 
 a {
 text-decoration: none; 
+color: white;
 }
 
 /* Section Styles */
 
 h1 {
 text-align: center;
-font-size: 2em;
 text-transform: uppercase;
+color: slategray;
+font-size: 1.75em;
 }
 
 h2 {
-font-family: 'open-sans', sans-serif;    
-font-size: 1em;
+text-align: center;
+font-weight: 400;
+color: coral;
 }
 
 h4 {
-   font-weight: 200;
+   font-weight: 100;
    font-size: 1em; 
 }
 
 p {
-font-family: 'open-sans', sans-serif;
 font-size: .9em;
+color: slategray;
 }
 
-.main-nav {
+ul {
+margin: 30px;
+padding: 0;   
+width: 100%; 
+}
+
+/* Layout styles */
+
+.title {
+display: inline-block;
 width: 100%;
-}
-
-.main-nav li {
-    font-size: 1.25em;
-float: right;
+font-size: 3em;
 list-style: none;
-margin-right: 20px;
+text-align: center;
+color: slategray;
+background: none;
+margin-bottom: 30px;
 }
 
-.main-nav .name {
-font-size: 2em;
-float: left;
+.main-nav .nav-links {
+text-transform: uppercase;
+display: inline-block;
+width: 100%;
 list-style: none;
-margin-left: 20px;
-margin-bottom: auto;
-margin-top: auto;
-}
-
-nav {
-    display: inline-block;
-    text-align: center;
-}
-
-
-
-nav li {
-float: left;
+text-align: center;
+background: coral;
+color: white;
+padding: 10px 30px;
+margin-bottom: 10px;
 }
 
 .profile-image {
-float: right;
-width: 40%;
-padding: 50px;
+width: 100%;
 margin: auto;
+padding: 30px;
 }
 
 .bio {
-float: left;
-width: 60%;
-font-weight: 200;
-padding: 20px;
 color: white;
-font-size: 2em;
+text-align: center;
+font-weight: 100;
+padding: 0 20px 0 20px;
+margin-top: -15px;
 }
 
 .main-header {
 background-color: coral;
-display: block;
 height: 50%;
+margin-bottom: 20px;
+text-align: center;
 }
 
 .marketing,
@@ -108,29 +109,48 @@ height: 50%;
 .favorite,
 .photo,
 .calc {
-    display: inline-block;
-    text-align: center;
-    float: left;
-    width: 30%;
+display: inline-block;
+text-align: center;
 margin: 20px;
 }
 
 
 img {
-    width: 100%;
+max-width: 100%;
 }
 
 footer {
-height: 200px;
+height: 350px;
     background-color: coral;
     text-align: center;
-    margin-top: auto;
+    margin: 0;
    color: white;
+   padding: 20px;
+   font-size: .9em;
+}
+
+.footer-color {
+color: white;
 }
 
 .footer-links {
     color: white;
     font-weight: bold;
+}
+
+.footer-name {
+display: inline-block;
+margin-right: 50px;
+margin-top: 50px;
+}
+
+.footer-top {
+display: inline-block;
+}
+
+.footer-break {
+    margin-top: 50px;
+    border: 1px solid white;
 }
 
 /* Clearfix rule */
@@ -141,3 +161,44 @@ height: 200px;
 }
 
 /* Media Queries */
+
+@media (min-width: 768px) {
+
+.main-header {
+width: 100%;
+}
+
+.main-nav .nav-links {
+display: inline;
+background: none;
+color: coral;
+text-align: center;
+}
+
+.profile-image {
+width: 40%;
+float: right;
+}
+        
+.bio {
+float: left;
+text-align: left;
+width: 60%
+font-size: 1.5em;
+}
+
+.marketing,
+.search,
+.travel,
+.favorite,
+.photo,
+.calc {
+width: 40%;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+
+}
