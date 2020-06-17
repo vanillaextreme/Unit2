@@ -1,0 +1,143 @@
+
+* {
+box-sizing: border-box;   
+}
+
+html {
+    height: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Open-Sans', sans-serif;    
+color: grey;
+background: rgb(250, 250, 250);
+overflow: auto;
+display: flex;
+flex-direction: column;
+min-height: 100%;
+height: 
+}
+
+/* Link Styles */
+
+a {
+text-decoration: none; 
+}
+
+/* Section Styles */
+
+h1 {
+text-align: center;
+font-size: 2em;
+text-transform: uppercase;
+}
+
+h2 {
+font-family: 'open-sans', sans-serif;    
+font-size: 1em;
+}
+
+h4 {
+   font-weight: 200;
+   font-size: 1em; 
+}
+
+p {
+font-family: 'open-sans', sans-serif;
+font-size: .9em;
+}
+
+.main-nav {
+width: 100%;
+}
+
+.main-nav li {
+    font-size: 1.25em;
+float: right;
+list-style: none;
+margin-right: 20px;
+}
+
+.main-nav .name {
+font-size: 2em;
+float: left;
+list-style: none;
+margin-left: 20px;
+margin-bottom: auto;
+margin-top: auto;
+}
+
+nav {
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+nav li {
+float: left;
+}
+
+.profile-image {
+float: right;
+width: 40%;
+padding: 50px;
+margin: auto;
+}
+
+.bio {
+float: left;
+width: 60%;
+font-weight: 200;
+padding: 20px;
+color: white;
+font-size: 2em;
+}
+
+.main-header {
+background-color: coral;
+display: block;
+height: 50%;
+}
+
+.marketing,
+.search,
+.travel,
+.favorite,
+.photo,
+.calc {
+    display: inline-block;
+    text-align: center;
+    float: left;
+    width: 30%;
+margin: 20px;
+}
+
+
+img {
+    width: 100%;
+}
+
+footer {
+height: 200px;
+    background-color: coral;
+    text-align: center;
+    margin-top: auto;
+   color: white;
+}
+
+.footer-links {
+    color: white;
+    font-weight: bold;
+}
+
+/* Clearfix rule */
+
+.clearfix:after {
+    display: table;
+    clear: both;
+}
+
+/* Media Queries */
