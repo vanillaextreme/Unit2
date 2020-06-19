@@ -4,8 +4,10 @@
 <head>
     <title>Jack Smith part 2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.google.com/specimen/Open+Sans+Condensed?category=Sans+Serif">
+<link href="https://fonts.google.com/specimen/Open+Sans+Condensed?category=Sans+Serif" rel="stylesheet">
+<link href="https://fonts.google.com/specimen/Playfair+Display?category=Serif" rel="stylesheet">
 </head>
 
 <body>
@@ -13,19 +15,20 @@
 <nav class="main-nav">
 <ul class="nav">
 <li class="title">Jack Smith 2</li>
-<li class="nav-links">Home</li>
-<li class="nav-links">Portfolio</li>
-<li class="nav-links">Contact</li>
+<li class="nav-links"><a href="#">Home</a></li>
+<li class="nav-links"><a href="portfolio.html">Portfolio</a></li>
+<li class="nav-links"><a href ="contact.html">Contact</a></li>
 </ul>
  </nav>
 
 <header class="main-header clearfix">
     <img src="img/bio.png" alt="Avatar of Jack" class="profile-image">
-<h3 class="bio">Hi! I'm a front-end developer who loves responsive design and css. I recently finished learning front-end web developement at Treehouse and am excited to put all my skills to use!</h3>
+<h5 class="bio">Hi! I'm a front-end developer who loves responsive design and css. I recently finished learning front-end web developement at Treehouse and am excited to put all my skills to use!</h5>
 </header>
 
-<main>
+<main class="wrapper">
 <section>
+
 <h1>Portfolio</h1>
 
 <div class="marketing">
@@ -68,14 +71,27 @@
 
 <footer>
     <div class="footer-nav">
-<h1 class="footer-color">Contact</h1>
+<h3 class="footer-color">Contact</h3>
 <h4>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</h4>
 <h4>Phone <a class="footer-links" href="tel:+1(111)555-1234">+1(111)555-1234</a></h4>
 <h4>Email <a class="footer-links" href="mailto:email@yoursite.com">email@yoursite.com</a></h4>
-<div class="footer-break"></div>
-<h1 class="footer-name footer-color">Jack Smith 2</h1>
-<h1 class="footer-top footer-color"><a href="#">Back to top</a></h1>
-</div>
+    </div>
+
+<hr>
+
+<nav class="footer-nav">
+  
+    <p class="footer-name footer-links footer-color">Jack Smith 2</p>
+    <p class="footer-top footer-links footer-color"><a href="#">Back To Top</a></p>
+</nav>
+
+<nav class="nav-bottom clearfix">
+    <ul>
+    <li class="footer-links footer-color"><a href="#">Home</a></li>
+    <li class="footer-links footer-color"><a href="portfolio.html">Portfolio</a></li>
+    <li class="footer-links footer-color"><a href ="contact.html">Contact</a></li>
+    </ul>
+     </nav>
 </footer>
 
 </body>

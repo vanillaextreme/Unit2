@@ -10,94 +10,119 @@ html {
 }
 
 body {
-margin: 0;
-padding: 0;
-font-family: 'Open-Sans', sans-serif;    
-overflow: auto;
 display: flex;
 flex-direction: column;
+font-family: 'Open-Sans', sans-serif;  
+margin: 0;
 min-height: 100%;
+overflow: auto;
+padding: 0;
 }
 
 /* Link Styles */
 
 a {
-text-decoration: none; 
 color: white;
+text-decoration: none; 
+
 }
 
 /* Section Styles */
 
 h1 {
+color: gray;
+font-size: 1.75em;
 text-align: center;
 text-transform: uppercase;
-color: slategray;
-font-size: 1.75em;
+
+
 }
 
 h2 {
-text-align: center;
+color: #FF7F50;
 font-weight: 400;
-color: coral;
+text-align: center;
+}
+
+h3 {
+color: gray;
+font-size: 1.75em;
+text-align: center;
+text-transform: uppercase;
 }
 
 h4 {
-   font-weight: 100;
-   font-size: 1em; 
+font-size: 1em; 
+font-weight: 100;
+}
+
+h5 {
+color: white;
+font-size: 1em;
+text-align: center;
+text-transform: uppercase;
 }
 
 p {
+color: gray;
 font-size: .9em;
-color: slategray;
+font-family: playfair, serif;
 }
 
 ul {
-margin: 30px;
 padding: 0;   
 width: 100%; 
+}
+
+hr {
+border: 1px solid white;
 }
 
 /* Layout styles */
 
 .title {
+background: none;
+color: gray;
 display: inline-block;
-width: 100%;
 font-size: 3em;
 list-style: none;
-text-align: center;
-color: slategray;
-background: none;
 margin-bottom: 30px;
+text-align: center;
+width: 100%;
+}
+
+.nav {
+padding: 30px;
 }
 
 .main-nav .nav-links {
-text-transform: uppercase;
-display: inline-block;
-width: 100%;
-list-style: none;
-text-align: center;
-background: coral;
+background: #FF7F50;
 color: white;
-padding: 10px 30px;
+display: inline-block;
+list-style: none;
 margin-bottom: 10px;
+padding: 10px;
+text-align: center;
+text-transform: uppercase;
+width: 100%;
 }
 
 .profile-image {
-width: 100%;
 margin: auto;
 padding: 30px;
+width: 100%;
 }
 
 .bio {
 color: white;
-text-align: center;
 font-weight: 100;
-padding: 0 20px 0 20px;
 margin-top: -15px;
+padding: 0 20px 0 20px;
+text-align: center;
 }
 
 .main-header {
-background-color: coral;
+background-color: #FF7F50;
 height: 50%;
 margin-bottom: 20px;
 text-align: center;
@@ -110,8 +135,8 @@ text-align: center;
 .photo,
 .calc {
 display: inline-block;
-text-align: center;
 margin: 20px;
+text-align: center;
 }
 
 
@@ -120,13 +145,13 @@ max-width: 100%;
 }
 
 footer {
+background-color: #FF7F50;
+color: white;
+font-size: .9em;
 height: 350px;
-    background-color: coral;
-    text-align: center;
-    margin: 0;
-   color: white;
-   padding: 20px;
-   font-size: .9em;
+margin: 0;
+padding: 20px;
+text-align: center;
 }
 
 .footer-color {
@@ -149,42 +174,90 @@ display: inline-block;
 }
 
 .footer-break {
-    margin-top: 50px;
-    border: 1px solid white;
+border: 1px solid white;
+margin-top: 50px;
+}
+
+.footer-name,
+.footer-top {
+    font-size: 2em;
+}
+
+.footer-name {
+float: left;   
+}
+
+.footer-top {
+float: right;
+}
+
+.nav-bottom {
+display: none;
+}
+
+/* Pseudo Styles */
+
+a:hover {
+color: turquoise;
+}
+
+
+/* Portfolio Page */
+
+.portfolio-header {
+background: turquoise;
+}
+
+/* Contact Page */
+
+.contact-links {
+color: coral;
 }
 
 /* Clearfix rule */
 
 .clearfix:after {
-    display: table;
-    clear: both;
+clear: both;
+display: table;
 }
 
 /* Media Queries */
 
 @media (min-width: 768px) {
 
+a {
+color: #FF7F50;    
+}
+
 .main-header {
 width: 100%;
 }
 
+.nav {
+text-align: center;
+}
+
 .main-nav .nav-links {
-display: inline;
 background: none;
-color: coral;
+color: #FF7F50;
+display: inline;
 text-align: center;
 }
 
 .profile-image {
-width: 40%;
 float: right;
+max-width: 40%;
 }
         
 .bio {
-float: left;
+font-size: 1em;
+margin-top: 25px;
 text-align: left;
 width: 60%
-font-size: 1.5em;
+}
+
+.wrapper {
+text-align: center;
 }
 
 .marketing,
@@ -196,9 +269,57 @@ font-size: 1.5em;
 width: 40%;
 }
 
+.nav-bottom {
+display: block;
+float: right;
+}
+
+.nav-bottom li {
+display: inline-block;
+text-align: center;
+padding-left: 30px;
+}
+
+.nav-bottom a {
+    color: white;
+}
+
+.footer-top {
+display: none;
+}
+
 }
 
 @media (min-width: 1024px) {
 
+.nav {
+display: inline-block;
+margin: 0;
+padding: 0;
+text-align: right;
+}
+
+.title {
+float: left;
+margin: 10px;
+padding: 0;
+width: 30%;
+}
+
+.main-nav .nav-links {
+font-size: 1.25em;
+margin: 0;
+padding-right: 30px;
+width: 60%;
+}
+
+.marketing,
+.search,
+.travel,
+.favorite,
+.photo,
+.calc {
+width: 25%;
+}
 
 }
