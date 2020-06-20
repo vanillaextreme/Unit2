@@ -12,7 +12,7 @@ html {
 body {
 display: flex;
 flex-direction: column;
-font-family: 'Open-Sans', sans-serif;  
+font-family: 'Open Sans', sans-serif;  
 margin: 0;
 min-height: 100%;
 overflow: auto;
@@ -43,11 +43,9 @@ text-align: center;
 }
 
 h3 {
-color: white;
+color: gray;
 font-size: 1.75em;
 text-align: center;
-text-transform: uppercase;
-font-family: 'Open-Sans', sans-serif;
 }
 
 h4 {
@@ -62,22 +60,15 @@ text-align: center;
 text-transform: uppercase;
 }
 
-h6 {
-color: gray;
-font-size: 1.75em;
-text-align: center;
-text-transform: uppercase;
-margin: 20px;
-}
-
 p {
 color: gray;
 font-size: .9em;
-font-family: 'playfair', serif;
+font-family: 'Playfair Display', serif;
 }
 
 ul {
-list-style: none;
+padding: 0;
+width: 100%;
 }
 
 hr {
@@ -87,20 +78,22 @@ border: 1px solid white;
 
 /* Layout styles */
 
-.main-heading {
-text-align: center;
-width: 100%;
+.nav {
+padding: 30px;
 }
 
-.main-name {
+.title {
+background: none;
 color: gray;
+display: inline-block;
 font-size: 2em;
-margin-top: 20px;
+list-style: none;
+margin-bottom: 30px;
 text-align: center;
 width: 100%;
 }
 
-.main-nav a {
+.main-nav .nav-links {
 background-color: #FF7F50;
 color: rgb(255, 255, 255);
 display: inline-block;
@@ -110,12 +103,6 @@ padding: 10px;
 text-align: center;
 text-transform: uppercase;
 width: 100%;
-}
-
-.main-header {
-background-color: #FF7F50;
-height: 50%;
-text-align: center;
 }
 
 .bio {
@@ -132,11 +119,21 @@ padding: 30px;
 width: 100%;
 }
 
-.col {
+.main-header {
+background-color: #FF7F50;
+height: 50%;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.marketing,
+.search,
+.travel,
+.favorite,
+.photo,
+.calc {
 display: inline-block;
-line-height: 1.5em;
-margin-right: 20px;
-margin-left: 20px;
+margin: 20px;
 text-align: center;
 }
 
@@ -155,18 +152,28 @@ width: 100%;
 }
 
 .skills {
-    padding: 10px;
+padding: 10px;
+text-align: center;
 }
 
 footer {
 background-color: #FF7F50;
 color: white;
-font-size: .9em;
-height: 275px;
+font-size: 1em;
 margin: 0;
-padding-right: 20px;
-padding-left: 20px;
+padding: 0 25px;
 text-align: center;
+}
+
+.uppercase {
+text-transform: uppercase;    
+}
+
+#contact {
+background-color: #FF7F50;
+color: white;
+text-align: center;
+padding: 0 25px;
 }
 
 .footer-color {
@@ -174,19 +181,23 @@ color: white;
 }
 
 .footer-links {
-    color: white;
-    font-weight: bold;
+color: white;
+font-weight: bold;
 }
 
-.footer-nav {
-    font-family: 'open-sans', serif;
+footer ul li a {
+font-size: .9em;
+font-family: 'Playfair Display, serif';
 }
 
-.footer-name,
+.footer-name {
+display: inline-block;
+font-family: 'Playfair Display, serif';
+}
+
 .footer-top {
 display: inline-block;
-font-size: 1.5em;
-
+font-family: 'Playfair Display, serif';
 }
 
 .footer-name {
@@ -199,8 +210,7 @@ float: right;
 
 .nav-bottom {
 display: none;
-text-transform: uppercase;
-font-weight: 100;
+font-size: 1.75em;
 }
 
 /* Pseudo Styles */
@@ -220,22 +230,22 @@ display: table;
 
 @media (min-width: 768px) {
 
-.main-name {
-padding-top: 20px;
+a {
+color: #FF7F50
 }
 
-.main-nav,
-.main-nav li {
-display: inline-block;
+.nav {
+text-align: center;
 }
 
-.main-nav a {
-    background: none;
-    color: #FF7F50;
+.main-nav .nav-links {
+background: none;
+color: #FF7F50;
+display: inline;
+text-align: center;
 }
 
 .main-header {
-padding-top: 20px;
 width: 100%;
 }
 
@@ -255,15 +265,22 @@ width: 60%
 text-align: center;
 }
 
-.col {
-padding: 10px;
-width: 40%;
+.marketing,
+.search,
+.travel,
+.favorite,
+.photo,
+.calc {
+float: left;
+margin: auto;
+min-height: 375px;
+padding: 20px;
+width: 50%;
 }
 
 .nav-bottom {
 display: block;
 float: right;
-font-size: 1.5em;
 }
 
 .nav-bottom li {
@@ -284,19 +301,42 @@ display: none;
 
 @media (min-width: 1024px) {
 
-
-.main-name {
-float: left;
-width: 30%;
+.nav {
+display: inline-block;
+padding: 15px 15px 0 15px;
+margin-bottom: 0;
+text-align: right;
 }
 
-.main-nav {
-float: right;
-width: 60%;
-margin-right: -100px;
+.title {
+    float: left;
+    padding: 0;
+    padding-left: 10px;
+    max-width: 30%;
+    text-align: left;
+    line-height: .70;
 }
 
-.col {
-width: 25%;
+
+
+.main-nav .nav-links {
+    font-size: 1.25em;
+    margin: 0;
+    width: 60%;
 }
 
+.nav-links a {
+    display: inline-block;
+    padding-top: 2px;
+}
+
+.marketing,
+.search,
+.travel,
+.favorite,
+.photo,
+.calc {
+width: 33.333%;
+}
+
+}
