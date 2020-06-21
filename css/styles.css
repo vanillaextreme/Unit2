@@ -210,7 +210,7 @@ float: right;
 
 .nav-bottom {
 display: none;
-font-size: 1.75em;
+font-size: 1.25em;
 }
 
 /* Pseudo Styles */
@@ -273,9 +273,13 @@ text-align: center;
 .calc {
 float: left;
 margin: auto;
-min-height: 375px;
+min-height: 400px;
 padding: 20px;
 width: 50%;
+}
+
+.footer-name {
+    font-size: 1.25em;
 }
 
 .nav-bottom {
